@@ -6,3 +6,7 @@
     apt:
       name: apache2
       state: present
+  - name: I want to start webserver on ubuntu ansible node
+    service:
+      name: apache2
+      state: restarted
