@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: myWebServers
   become: yes
   tasks:
   - name: I want to install weberver on ubuntu ansible nodes
