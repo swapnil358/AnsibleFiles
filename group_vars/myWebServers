@@ -1,3 +1,3 @@
 ---
-webpackonubuntu= apache2
-webpackonredhat= httpd
+webpackonubuntu: apache2
+webpackonredhat: httpd
