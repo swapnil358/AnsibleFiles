@@ -13,13 +13,14 @@
     copy:
       src: mystaticfile.txt
       dest: /home/ubuntu/mystaticfile.txt
+      notify: restartwebserver
 
 
   - name: coupy index.j2 file into ansible node side
     template:
         src:  myindex.j2
         dest: /var/www/html/index.html
-
+    notify: restartwebserver
 
   - name: download internet file
     get_url:
@@ -27,4 +28,9 @@
       dest: /home/ubuntu/jenkins.war
       force_basic_auth: yes
 
+  handlers:
+  - name: restartwebserver
+    service: 
+      name: apache2
+      state: restarted
 
