@@ -1,0 +1,9 @@
+---
+- host: 172.31.34.33
+  become: yes
+  tasks:
+  - include_tasls: myfile.txt
+  - name: install webserver
+    apt:
+      name: apache2
+      state: present
