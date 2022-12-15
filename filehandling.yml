@@ -13,7 +13,7 @@
     copy:
       src: mystaticfile.txt
       dest: /home/ubuntu/mystaticfile.txt
-      notify: restartwebserver
+    notify: restartwebserver
 
 
   - name: coupy index.j2 file into ansible node side
