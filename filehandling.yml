@@ -1,5 +1,5 @@
 ---
-- host: 172.31.34.33
+- hosts: 172.31.34.33
   become: yes
   tasks:
   - include_tasls: myfile.txt
